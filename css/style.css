@@ -1,0 +1,67 @@
+body {
+  background-color: #f6f7f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer-bar {
+  background-color: #212529;
+  color: #adb5bd;
+  padding: 14px 0;
+  font-size: 14px;
+}
+
+/* plain form for task 0 and 1 (no bootstrap form classes) */
+.plain-form {
+  max-width: 520px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.plain-form .field {
+  margin-bottom: 14px;
+}
+
+.plain-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.plain-form input,
+.plain-form textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #888;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.plain-form button {
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ok-box {
+  max-width: 520px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: #d1e7dd;
+  border: 1px solid #a3cfbb;
+}
+
+.test-box {
+  max-width: 520px;
+  margin-top: 24px;
+}
+
+.test-box h2 {
+  font-size: 20px;
+}

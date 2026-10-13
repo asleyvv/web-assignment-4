@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 4 | Assignment 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Assignment 4</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="task0.html">Task 0</a></li>
+          <li class="nav-item"><a class="nav-link" href="task1.html">Task 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="task2.html">Task 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="task3.html">Task 3</a></li>
+          <li class="nav-item"><a class="nav-link active" href="task4.html" aria-current="page">Task 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <h1>Task 4. Registration form</h1>
+    <p class="text-muted">Responsive form: two columns on medium screens and up, one column on phones.</p>
+
+    <div class="row">
+      <div class="col-12 col-lg-9">
+        <form id="regForm" novalidate>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="fname" class="form-label">First name</label>
+              <input type="text" class="form-control" id="fname" name="fname" placeholder="Duman" required minlength="2" data-required="First name is required">
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="lname" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lname" name="lname" placeholder="Zhanybekov" required minlength="2" data-required="Last name is required">
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required data-required="Email is required">
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required minlength="8" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,}" aria-describedby="passHelp" data-required="Password is required">
+              <div id="passHelp" class="form-text">At least 8 characters, with a letter and a number.</div>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="confirm" class="form-label">Confirm password</label>
+              <input type="password" class="form-control" id="confirm" name="confirm" required data-required="Please confirm your password">
+              <div class="valid-feedback">Passwords match.</div>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <span class="form-label d-block">Gender</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                <label class="form-check-label" for="other">Other</label>
+              </div>
+              <div class="invalid-feedback" id="genderFb">Please choose one option.</div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" name="country" required data-required="Please choose a country">
+                <option value="" selected disabled>Choose...</option>
+                <option>Kazakhstan</option>
+                <option>Canada</option>
+                <option>Germany</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Other</option>
+              </select>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="col-12">
+              <span class="form-label d-block">Hobbies (optional)</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="h1" value="sports">
+                <label class="form-check-label" for="h1">Sports</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="h2" value="music">
+                <label class="form-check-label" for="h2">Music</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="h3" value="gaming">
+                <label class="form-check-label" for="h3">Gaming</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="h4" value="travel">
+                <label class="form-check-label" for="h4">Travel</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="hobbies" id="h5" value="reading">
+                <label class="form-check-label" for="h5">Reading</label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Register</button>
+              <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="okBox" class="alert alert-success mt-3 d-none" role="alert"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-bar">
+    <div class="container">Duman Zhanybekov, SE-2530 | Web Technologies, Assignment 4</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/task4.js"></script>
+</body>
+</html>

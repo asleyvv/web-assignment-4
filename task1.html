@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 1 | Assignment 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Assignment 4</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="task0.html">Task 0</a></li>
+          <li class="nav-item"><a class="nav-link active" href="task1.html" aria-current="page">Task 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="task2.html">Task 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="task3.html">Task 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="task4.html">Task 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <h1>Task 1. Form with HTML5 validation</h1>
+    <p class="text-muted">The browser checks the fields itself when you press Send. No JavaScript is used for the checking.</p>
+
+    <form class="plain-form" id="form1" action="#" method="post">
+      <div class="field">
+        <label for="name">Name (required, 2-40 characters)</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="40">
+      </div>
+
+      <div class="field">
+        <label for="email">Email (required, must look like an email)</label>
+        <input type="email" id="email" name="email" required maxlength="60">
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone (optional, 10-12 digits, + allowed at the start)</label>
+        <input type="tel" id="phone" name="phone" pattern="\+?[0-9]{10,12}" title="10 to 12 digits, for example +77011234567">
+      </div>
+
+      <div class="field">
+        <label for="message">Message (required, 10-300 characters)</label>
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="300"></textarea>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <div id="ok" class="ok-box" hidden>All fields are valid, the form was accepted.</div>
+
+    <div class="test-box">
+      <h2>What I tested</h2>
+      <ul>
+        <li>Empty form: browser stops and says to fill the first field.</li>
+        <li>Email without @ (for example "duman.mail.com"): browser says the email is wrong.</li>
+        <li>Name with 1 letter: browser says it is too short (minlength).</li>
+        <li>Phone "12345": browser shows the title text because the pattern does not match.</li>
+        <li>Message longer than 300 characters: not possible to type, maxlength stops it.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer-bar">
+    <div class="container">Duman Zhanybekov, SE-2530 | Web Technologies, Assignment 4</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/task1.js"></script>
+</body>
+</html>
