@@ -47,4 +47,4 @@ README.md
 3. Under **Source** choose **Deploy from a branch**, branch `main`, folder `/ (root)`, and press Save.
 4. After a minute the site is available at `https://asleyvv.github.io/web-assignment-4/`.
 
-Live link: _paste your link here_
+Live link: [_paste your link here_](https://asleyvv.github.io/web-assignment-4/)
